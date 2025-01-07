@@ -1,0 +1,13 @@
+/* Styling the container for vertical alignment */
+.vertical-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Space between components */
+  max-width: 200px; /* Optional: Set max width */
+  margin: 50px; /* Optional: Center the container */
+}
+
+/* Optional: Add custom styles for components */
+my-button {
+  display: block; /* Makes each button take its own row */
+}
