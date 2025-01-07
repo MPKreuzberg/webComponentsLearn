@@ -1,12 +1,12 @@
 class MyButton extends HTMLElement {
-    constructor() {
-        super(); // Poziva osnovni konstruktor HTMLElement
-        this.attachShadow({ mode: 'open' }); // Shadow DOM za izolaciju
-    }
+  constructor() {
+    super(); // Base constructor call HTMLElement
+    this.attachShadow({ mode: "open" });
+  }
 
-    connectedCallback() {
-        // Dodavanje HTML i stilova
-        this.shadowRoot.innerHTML = `
+  connectedCallback() {
+    // HTML and Style adding
+    this.shadowRoot.innerHTML = `
             <style>
                 button {
                     padding: 10px 20px;
@@ -20,15 +20,15 @@ class MyButton extends HTMLElement {
                     background-color: #0056b3;
                 }
             </style>
-            <button>${this.getAttribute('label') || 'Click Me'}</button>
+            <button>${this.getAttribute("label") || "Click Me"}</button>
         `;
 
-        // Dodavanje event listenera
-        this.shadowRoot.querySelector('button').addEventListener('click', () => {
-            alert(this.getAttribute('message') || 'Default action!');
-        });
-    }
+    // Event listener add
+    this.shadowRoot.querySelector("button").addEventListener("click", () => {
+      alert(this.getAttribute("message") || "Default action!");
+    });
+  }
 }
 
-// Registruj Web Component
-customElements.define('my-button', MyButton);
+//  Web Component  Registration
+customElements.define("my-button", MyButton);
