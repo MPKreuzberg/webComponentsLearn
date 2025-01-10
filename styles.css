@@ -7,6 +7,10 @@
   margin: 50px; /* Optional: Center the container */
 }
 
+.button {
+  margin-left: 150px;
+}
+
 /* Optional: Add custom styles for components */
 my-button {
   display: block; /* Makes each button take its own row */
