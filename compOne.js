@@ -3,7 +3,7 @@ class CompOne extends HTMLElement {
     super();
     this.attachShadow({ mode: "open" });
   }
-
+// bla
   connectedCallback() {
     const label = this.getAttribute("label") || "Click me";
 
